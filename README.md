@@ -2,14 +2,14 @@
 
 ### Usage
 
-For a minimal server setup use this command:
+To setup the server use this command:
 
-Replace `PATH_TO_DATA` and `YOUR_COLLECTION` with values of your choice.
+Replace the variables with values of your choice.
 
 ```bash
 docker run \
     -p 27015:27015/udp -p 27015:27015 \
-    -v PATH_TO_DATA:/home/steam/servers \
+    -v PATH_TO_YOUR_DATA:/home/steam/servers \
     -e "INSTALL_CSS=true" \
     -e "WORKSHOP_COLLECTION_ID=YOUR_COLLECTION" \
     -e "MAXPLAYERS=16" \
