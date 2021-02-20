@@ -1,4 +1,4 @@
-## docker-ttt2
+## docker-ttt
 
 ### Usage
 
@@ -16,7 +16,7 @@ docker run \
     -e "POSTTIME=30" \
     -e "ROUNDLIMIT=6" \
     -e "FIRST_PREPTIME=60" \
-    docker-ttt2
+    docker-ttt
 ```
 
 ### Configuration
