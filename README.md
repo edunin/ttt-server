@@ -24,7 +24,7 @@ docker run \
 To configure the ttt server mostly volumes and environment variables are passed to the container.
 
 #### Environment variables
-All possible settings :https://www.troubleinterroristtown.com/config/settings/
+All possible settings https://www.troubleinterroristtown.com/config/settings/
 
 | Variable                 | Default | Description                       |
 | ------------------------ | ------- | --------------------------------- |
