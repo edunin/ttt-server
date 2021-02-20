@@ -10,9 +10,9 @@ Replace `PATH_TO_DATA` and `YOUR_COLLECTION` with values of your choice.
 docker run \
     -p 27015:27015/udp -p 27015:27015 \
     -v PATH_TO_DATA:/home/steam/servers \
-    -e "MAXPLAYERS=16" \
     -e "INSTALL_CSS=true" \
     -e "WORKSHOP_COLLECTION_ID=YOUR_COLLECTION" \
+    -e "MAXPLAYERS=16" \
     -e "PREPTIME=30" \
     -e "POSTTIME=30" \
     -e "ROUNDLIMIT=6" \
