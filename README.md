@@ -12,9 +12,10 @@ docker run \
     -v PATH_TO_DATA:/home/steam/servers \
     -e "INSTALL_CSS=true" \
     -e "WORKSHOP_COLLECTION_ID=YOUR_COLLECTION" \
-    -e "PREP_TIME=15" \
-    -e "POST_TIME=" \
-    -e 
+    -e "PREPTIME=30" \
+    -e "POSTTIME=30" \
+    -e "ROUNDLIMIT=6" \
+    -e "FIRST_PREPTIME=60" \
     docker-ttt2
 ```
 
