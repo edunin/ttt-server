@@ -20,4 +20,6 @@ RUN chown -R steam:steam /home/steam/servers
 COPY --chown=steam:steam cfg cfg
 COPY --chown=steam:steam install.sh .
 
+EXPOSE 27015
+
 CMD ["./install.sh"]
