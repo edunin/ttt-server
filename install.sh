@@ -11,18 +11,23 @@ gmod_path="$servers_path/gmod_ds"
 gmod_cfg_path="$gmod_path/garrysmod/cfg"
 css_path="$servers_path/css_ds"
 
-### Install gmod server
-echo "Downloading gmod server from steam..."
-./steamcmd.sh +login anonymous +force_install_dir "$gmod_path" +app_update 4020 +quit
-
-### Install css server
+### Install gmod & css server
 if [ "$INSTALL_CSS" = true ]; then
-    echo "CS:S server installation is enabled. Downloading it from steam..."
-    ./steamcmd.sh +login anonymous +force_install_dir "$css_path" +app_update 232330 +quit
+    echo "CS:S server installation is enabled. Downloading css & gmod server from steam..."
+    ./steamcmd.sh +login anonymous +force_install_dir "$gmod_path" +app_update 4020 +force_install_dir "$css_path" +app_update 232330 +quit
     
     echo "Copying mount configuration..."
     cp  $mount_cfg_path $gmod_cfg_path
+    
+    else
+        ### Install only gmod server
+        echo "Downloading only gmod server from steam..."
+        ./steamcmd.sh +login anonymous +force_install_dir "$gmod_path" +app_update 4020 +quit
 fi
+
+### Install gmod server
+echo "Downloading gmod server from steam..."
+./steamcmd.sh +login anonymous +force_install_dir "$gmod_path" +app_update 4020 +quit
 
 ### Copy server configuration
 echo "Copying gmod server configuration..."
@@ -30,4 +35,4 @@ cp $server_cfg_path $gmod_cfg_path
 
 ### Run server
 echo "Running gmod server..."
-~/servers/gmod_ds/srcds_run -game garrysmod -debug +gamemode terrortown +maxplayers 16 +map gm_flatgrass +host_workshop_collection $WORKSHOP_COLLECTION_ID
+~/servers/gmod_ds/srcds_run -game garrysmod +gamemode terrortown +maxplayers 16 +map gm_flatgrass +host_workshop_collection $WORKSHOP_COLLECTION_ID -ttt_preptime_seconds $PREP_TIME -ttt_posttime_seconds $POST_TIME -ttt_round_limit $ROUND_PER_MAP_LIMIT -ttt_firstpreptime $TTT_FIRST_PREPTIME
