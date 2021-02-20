@@ -35,4 +35,4 @@ cp $server_cfg_path $gmod_cfg_path
 
 ### Run server
 echo "Running gmod server..."
-~/servers/gmod_ds/srcds_run -game garrysmod +gamemode terrortown +maxplayers 16 +map gm_flatgrass +host_workshop_collection $WORKSHOP_COLLECTION_ID -ttt_preptime_seconds $PREP_TIME -ttt_posttime_seconds $POST_TIME -ttt_round_limit $ROUND_PER_MAP_LIMIT -ttt_firstpreptime $TTT_FIRST_PREPTIME
+~/servers/gmod_ds/srcds_run -game garrysmod +gamemode terrortown +maxplayers 16 +map gm_flatgrass +host_workshop_collection $WORKSHOP_COLLECTION_ID -ttt_preptime_seconds $PREPTIME -ttt_posttime_seconds $POSTTIME -ttt_round_limit $ROUND_PER_MAP_LIMIT -ttt_firstpreptime $TTT_FIRST_PREPTIME
