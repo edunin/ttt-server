@@ -25,10 +25,6 @@ if [ "$INSTALL_CSS" = true ]; then
         ./steamcmd.sh +login anonymous +force_install_dir "$gmod_path" +app_update 4020 +quit
 fi
 
-### Install gmod server
-echo "Downloading gmod server from steam..."
-./steamcmd.sh +login anonymous +force_install_dir "$gmod_path" +app_update 4020 +quit
-
 ### Copy server configuration
 echo "Copying gmod server configuration..."
 cp $server_cfg_path $gmod_cfg_path
